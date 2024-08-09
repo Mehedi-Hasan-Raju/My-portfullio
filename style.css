@@ -96,3 +96,223 @@ section{
     font-size: var(--big-font);
     font-weight: 700;
 }
+
+.change-text h3{
+    display: inline-flex;
+    margin: 0;
+    vertical-align: top;
+}
+.change-text h3 .word{
+    position: absolute;
+    display: flex;
+    opacity: 0;
+}
+
+.change-text h3 .word .letter{
+    transform-origin: center center 25px;
+}
+.change-text h3 .word .letter.out{
+    transform: rotateX(90deg);
+    transition: 0.32s cubic-bezier(0.6,0,0.7,0.2);
+}
+.change-text h3 .word .letter.in{
+    transition: 0.38s ease;
+}
+.change-text h3 .word .letter.behind {
+    transform: rotateX(-90deg);
+}
+.home-contant p{
+    color: #bdbdbd;
+    line-height: 1.6;
+}
+.info-box{
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 400px;
+    margin: 1rem 0 2rem;
+}
+.info-box h5{
+    font-weight: 600;
+    color: var(--text-color);
+    font-size: 1rem;
+}
+.info-box span {
+    font-size: .9rem;
+    color: #bdbdbd;
+}
+.btn-box{
+    display: flex;
+    justify-content: space-between;
+    width: 320px;
+    height: 45px;
+}
+.btn-box a.btn{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background: var(--hover-color);
+    color: var(--bg-color);
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-weight: 600;
+    transition: .6s;
+    box-shadow: var(--neno-box-shadow);
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    border: 2px solid var(--hover-color);
+}
+
+a.btn:hover{
+   color: var(--hover-color); 
+}
+
+a.btn::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: var(--bg-color);
+    width: 0;
+    height: 100%;
+    z-index: -1;
+    transition: .4s;
+}
+a.btn:hover::before{
+    width: 100%;
+}
+
+a.btn:nth-child(2) {
+    background: var(--bg-color);
+    color: var(--hover-color);
+}
+ 
+a.btn:nth-child(2):hover{
+    color: var(--bg-color);
+}
+a.btn:nth-child(2)::before{
+    background: var(--hover-color);
+}
+
+.social-icons{
+    margin-top: 8rem;
+    display: flex;
+    justify-content: space-between;
+    width: 220px;
+    height: 40px;
+}
+.social-icons a{
+    display: inline-flex;
+    width: 50px;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background: var(--bg-color);
+    color: var(--hover-color);
+    border: 2px solid rgba(18,247,255,0.6);
+    transition: .6s;
+    box-shadow: 0 0 0.3rem #12f7ff;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+.social-icons a i{
+    font-size: 1.5rem;
+}
+.social-icons a:hover{
+    color: var(--bg-color);
+}
+.social-icons a::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background: var(--hover-color);
+    transition: .6s;
+    z-index: -1;
+}
+
+.social-icons a:hover::before{
+    width: 100%;
+}
+
+.home-imge {
+    position: relative;
+}
+
+.img-box {
+    text-align: center;
+    width: 400px;
+    height: 400px;
+    margin-right: 100px;
+    margin-left: 200px;
+    position: relative; /* Ensure the .img-box remains above .liquid-shape */
+    z-index: 1; /* Set a higher z-index than .liquid-shape */
+}
+
+.img-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    border: 2px solid var(--hover-color);
+    text-shadow: #12f7ff;
+}
+
+.liquid-shape {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    margin-right: 100px;
+    margin-left: 200px;
+    z-index: 0; /* Set a lower z-index than .img-box */
+    top: 10%;
+}
+
+.liquid-shape:nth-child(2) {
+    filter: blur(50px);
+}
+
+/* About section------------------------*/
+
+.home-imge2 {
+    position: relative;
+}
+
+.img-box2 {
+    text-align: right;
+    width: 400px;
+    height: 400px;
+    margin-right: 400px;
+    margin-left: 50;
+    position: relative; /* Ensure the .img-box remains above .liquid-shape */
+    z-index: 1; /* Set a higher z-index than .liquid-shape */
+}
+
+.img-box2 img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    border: 2px solid var(--hover-color);
+    text-shadow: #12f7ff;
+}
+
+.liquid-shape2 {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    margin-right: 400px;
+    margin-left: auto;
+    z-index: 0; /* Set a lower z-index than .img-box */
+    top: 10%;
+}
+
+.liquid-shape2:nth-child(2) {
+    filter: blur(50px);
+}
