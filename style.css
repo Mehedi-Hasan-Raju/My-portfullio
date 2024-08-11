@@ -316,3 +316,61 @@ a.btn:nth-child(2)::before{
 .liquid-shape2:nth-child(2) {
     filter: blur(50px);
 }
+
+
+
+.about{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 2rem;
+    background: var(--secon-bg-color);
+}
+
+.about-content span{
+    color: #fdfdfd;
+    font-size: .8rem;
+    font-weight: 200;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.about-content h2 {
+    color: var(--hover-color);
+    font-weight: 700;
+    font-size: var(--norma-font);
+}
+.about-content h3{
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-bottom: .2rem;
+}
+.about-content p{
+    color: #fdfdfd;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+}
+.full-text {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+}
+
+.full-text.expanded {
+    max-height: 300px; /* Adjust this value as needed */
+    overflow-y: auto;
+}
+
+.btn-box .btn1 {
+    color: white;
+    background-color: var(--hover-color);
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+.btn-box .btn1:hover {
+    background-color: var(--secon-bg-color);
+}
